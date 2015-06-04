@@ -34,6 +34,11 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
+  }, 
+
+  '/weather': {
+    controller: 'WeatherController', 
+    action: 'info' 
   }
 
   /***************************************************************************
