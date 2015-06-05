@@ -20,17 +20,23 @@ module.exports = {
   	var queryStatement = 'select * from weather.forecast where (location =' + location +')'; 
   	// If queryStatement is incorrect, the program crashes.
   	// Need to handle when there is a bad query. User can enter a invalid location
-	var query = new YQL(queryStatement);
+	  var query = new YQL(queryStatement);
 
   	query.exec(function(err, data) {
-  		if (err) return res.json({message: 'Error loading weather information.'}); 
+  		if (err) {
+        var error = [{error: true}]; 
+        error = JSON.stringify(error); 
+        return res.json(error); 
+      } else {
+        var error = {error: false};  
+      }
 
   		var location = data.query.results.channel.location;		// city, coutnry, region 
   		var condition = data.query.results.channel.item.condition;	// temp, text 
   		var astronomy = data.query.results.channel.astronomy;	// sunrise, sunset 
 
-  		var result = [location, condition, astronomy]; 
-  		result = JSON.stringify(result); 
+  		var result = [error, location, condition, astronomy]; 
+  		result = JSON.stringify(result);  
   		return res.json(result); 
   	});
   }
