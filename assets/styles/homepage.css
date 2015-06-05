@@ -1,0 +1,53 @@
+html, 
+body {
+	height: 100%;
+}
+
+#wrapper {
+	min-height: 100%;
+	position: relative;
+}
+
+header {
+	text-align: center; 
+	color: #fff;
+	background-color: #19B5FE;
+	background-image: url(../images/cool.jpg);
+	-webkit-background-size: cover;
+	background-size: cover; 
+	-0-background-size: cover; 
+	padding-bottom: 50px;
+}
+
+header .intro-text {
+	padding-top: 100px; 
+	padding-bottom: 20px; 
+	text-align: center; 
+}
+
+
+section {
+	padding: 50px 0; 
+}
+
+@media (min-width: 768px) {
+	header {
+		padding-bottom: 75px;
+	}
+
+	header .intro-text {
+		text-align: left; 
+	}
+	section {
+		padding: 100px 0;
+	}
+}
+
+#footer {
+	padding-top: 40px; 
+	width: 100%;
+	position: absolute;
+	height: 100px; 
+	bottom: 0;
+	left: 0; 
+}
