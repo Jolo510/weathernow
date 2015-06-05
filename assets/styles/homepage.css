@@ -7,7 +7,6 @@ body {
 	min-height: 100%;
 	position: relative;
 }
-
 header {
 	text-align: center; 
 	color: #fff;
@@ -44,7 +43,7 @@ section {
 }
 
 #footer {
-	padding-top: 40px; 
+	padding-top: 30px; 
 	width: 100%;
 	position: absolute;
 	height: 100px; 
