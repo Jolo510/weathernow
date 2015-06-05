@@ -42,7 +42,37 @@ section {
 	}
 }
 
-#footer {
+li {
+	text-align: -webkit-match-parent;
+}
+
+
+
+.social-links li {
+	width: 50%; 
+	padding-top: 1em; 
+	padding-bottom: 1em; 
+	display: block;
+	float: left;
+
+}
+
+.social-links a {
+	text-decoration: none; 
+	font-size: 1.5em;
+}
+
+@media (min-width: 922px) {
+	.social-links li {
+		width: 25%;
+		padding: 0; 
+	}
+}
+
+
+footer {
+	text-align: center;
+	/* Keeps the footer at the bottom of the page */
 	padding-top: 30px; 
 	width: 100%;
 	position: absolute;
