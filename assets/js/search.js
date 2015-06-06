@@ -7,7 +7,6 @@ function loadData() {
 												// condition = {code, date, temp, text} 
 												// astronomy = {sunrise, sunset}
 		if (resultObject[0].error == false) {
-			console.log("I'm executing this code"); 
 			$('#sunrise').text('Sunrise : ' + resultObject[3].sunrise);
 			$('#place').text(resultObject[1].city + ' ' + resultObject[1].region); 
 			$('#weather').text('Weather Condition ' + resultObject[2].text); 

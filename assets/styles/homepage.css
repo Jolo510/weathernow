@@ -47,28 +47,35 @@ li {
 }
 
 
-
-.social-links li {
-	width: 50%; 
-	padding-top: 1em; 
-	padding-bottom: 1em; 
-	display: block;
-	float: left;
-
+.footer-icon {
+	height: 50px;
+	width: 50px; 
 }
 
-.social-links a {
-	text-decoration: none; 
-	font-size: 1.5em;
+ul.social-buttons {
+	margin-bottom: 0; 
 }
 
-@media (min-width: 922px) {
-	.social-links li {
-		width: 25%;
-		padding: 0; 
-	}
+ul.social-links a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    font-size: 20px;
+    line-height: 40px;
+    outline: 0;
+    color: #fff;
+    background-color: #222;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
 }
 
+ul.social-buttons li a:hover,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:active {
+    background-color: #fed136;
+}
 
 footer {
 	text-align: center;

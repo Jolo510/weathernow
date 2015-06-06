@@ -23,14 +23,15 @@ module.exports = {
 	  var query = new YQL(queryStatement);
 
   	query.exec(function(err, data) {
-  		if (err) {
+  		if (err || data.query.results.channel.title == "Yahoo! Weather - Error") {
+        // The err only returns if the zipcode entered is bad input. (i.e. contains letters) 
+        // The data.query.results.channel.title checks if data is returned 
         var error = [{error: true}]; 
         error = JSON.stringify(error); 
         return res.json(error); 
       } else {
         var error = {error: false};  
       }
-
   		var location = data.query.results.channel.location;		// city, coutnry, region 
   		var condition = data.query.results.channel.item.condition;	// temp, text 
   		var astronomy = data.query.results.channel.astronomy;	// sunrise, sunset 
