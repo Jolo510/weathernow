@@ -7,20 +7,26 @@ function loadData() {
 												// condition = {code, date, temp, text} 
 												// astronomy = {sunrise, sunset}
 		if (resultObject[0].error == false) {
+			// Removes error class if there was a previous error
+			if ($("#form-container").hasClass("has-error")) {
+				$("#form-container").removeClass("has-error");
+			} 
+
 			$('#sunrise').text('Sunrise : ' + resultObject[3].sunrise);
 			$('#place').text(resultObject[1].city + ' ' + resultObject[1].region); 
 			$('#weather').text('Weather Condition ' + resultObject[2].text); 
 			$('#temperature').text('Temperature ' + + resultObject[2].temp + ' F')
 			$('#sunset').text('Sunset : ' + resultObject[3].sunset); 
 		} else {
-			// Write code to display error 
-			alert("Invalid Zip Code/Postal Code"); 
+			// Adds error class to the form when an error occurs 
+			$("#form-container").addClass("has-error");
 		}
 
 	}).error(function(e) {
 		alert("Couldn't load data"); 
 	}); 
 	
+
 	// Terminating 
 	return false; 
 }; 

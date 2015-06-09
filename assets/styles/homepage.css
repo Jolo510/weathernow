@@ -7,80 +7,29 @@ body {
 	min-height: 100%;
 	position: relative;
 }
+
+#weatherDisplay{
+	text-align: center; 
+}
+
 header {
-	text-align: center; 
-	color: #fff;
-	background-color: #19B5FE;
-	background-image: url(../images/cool.jpg);
-	-webkit-background-size: cover;
-	background-size: cover; 
-	-0-background-size: cover; 
-	padding-bottom: 50px;
+	padding-top: 25px;
+	padding-bottom: 50px; 
+	text-align: center;
+	font-size: 4em;
 }
 
-header .intro-text {
-	padding-top: 100px; 
-	padding-bottom: 20px; 
-	text-align: center; 
+#zipForm {
+	padding-top: 50px;
+	padding-bottom: 100px; 
+	text-align: center;
 }
 
-
-section {
-	padding: 50px 0; 
-}
-
-@media (min-width: 768px) {
-	header {
-		padding-bottom: 75px;
-	}
-
-	header .intro-text {
-		text-align: left; 
-	}
-	section {
-		padding: 100px 0;
-	}
-}
-
-li {
-	text-align: -webkit-match-parent;
-}
-
-
-.footer-icon {
-	height: 50px;
-	width: 50px; 
-}
-
-ul.social-buttons {
-	margin-bottom: 0; 
-}
-
-ul.social-links a {
-    display: block;
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    font-size: 20px;
-    line-height: 40px;
-    outline: 0;
-    color: #fff;
-    background-color: #222;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    transition: all .3s;
-}
-
-ul.social-buttons li a:hover,
-ul.social-buttons li a:focus,
-ul.social-buttons li a:active {
-    background-color: #fed136;
-}
 
 footer {
 	text-align: center;
 	/* Keeps the footer at the bottom of the page */
-	padding-top: 30px; 
+	padding-top: 50px; 
 	width: 100%;
 	position: absolute;
 	height: 100px; 
