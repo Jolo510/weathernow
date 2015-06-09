@@ -2,9 +2,25 @@
 	<!-- Displays City --> 
 	<header>
 		<div class="container"> 
-			Your City
+			<span id="place">Your City</span> 
 		</div> 
 	</header>
+
+	<!-- Form entry --> 
+	<section id="zipForm" class="hidden-md hidden-lg">
+		<div class="container"> 
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<form class="form-inline" id="searchTop">
+						<div class="form-group">
+							<input type="text" id="location" class="form-control" id="zipcodeInput" placeholder="Enter Zipcode / Postal Code"> 
+						</div>		
+						<button type="submit" class="btn btn-primary form-control">Search</button>				
+					</form>
+				</div>
+			</div>
+		</div>	
+	</section>
 
 	<!-- Weather Display --> 
 	<section id="weatherDisplay"> 	
@@ -18,22 +34,22 @@
 						<img src="/images/cloud.png">
 						<div class="caption">
 							<h4>Time</h4> 
-							<p> -:-- am</p> 
+							<span id="sunrise"> -:-- am</span> 
 						</div>  
 					</div> 
 				</div> 
 				<div class="col-md-4"> 
 					<div class="thumbnail">
 						<div class="caption">
-							<h3>Todays Details</h3> 
+							<h3>Today's Details</h3> 
 						</div>
 						<img src="/images/cloud.png">
 						<div class="caption">
 							<h4>Temperature</h4> 
-							<p>-- &deg; F</p> 
+							<span id="temperature">--</span>&deg; F
 							<h4>Condition</h4> 
-							<p>--</p> 
-							<p> High: -- Low: --</p> 
+							<span id="weather">--</span><br>
+							<span>High: <span id="high">--</span> Low: <span id="low">--</span></span> 
 						</div>  
 					</div>
 				</div>
@@ -45,7 +61,7 @@
 						<img src="/images/cloud.png"> 
 						<div class="caption">
 							<h4>Time</h4> 
-							<p> -:-- pm</p> 
+							<span id="sunset"> -:-- m</span> 
 						</div> 
 					</div>
 				</div>
@@ -54,13 +70,13 @@
 	</section> 
 
 	<!-- Form entry --> 
-	<section id="zipForm">
+	<section id="zipForm" class="hidden-xs hidden-sm">
 		<div class="container"> 
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
-					<form class="form-inline">
+					<form class="form-inline" id="searchBottom">
 						<div class="form-group">
-							<input type="text" class="form-control" id="zipcodeInput" placeholder="Enter Zipcode / Postal Code"> 
+							<input type="text" id="locationBottom" class="form-control" id="zipcodeInput" placeholder="Enter Zipcode / Postal Code"> 
 						</div>		
 						<button type="submit" class="btn btn-primary form-control">Search</button>				
 					</form>
@@ -70,6 +86,7 @@
 	</section>
 
 	<!-- Footer  --> 
+<!-- 	<div id="footerSpacing" class="hidden-md hidden-lg"></div>
 	<footer> 
 		<div class="container"> 
 			<div class="row"> 
@@ -86,6 +103,6 @@
 				</div> 
 			</div> 
 		</div> 
-	</footer> 
+	</footer>  -->
 
 <div><!-- #wrapper  --> 

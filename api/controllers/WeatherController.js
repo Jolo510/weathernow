@@ -35,8 +35,9 @@ module.exports = {
   		var location = data.query.results.channel.location;		// city, coutnry, region 
   		var condition = data.query.results.channel.item.condition;	// temp, text 
   		var astronomy = data.query.results.channel.astronomy;	// sunrise, sunset 
+      var forecast = data.query.results.channel.item.forecast[0]; 
 
-  		var result = [error, location, condition, astronomy]; 
+  		var result = [error, location, condition, astronomy, forecast]; 
   		result = JSON.stringify(result);  
   		return res.json(result); 
   	});
