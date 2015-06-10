@@ -13,15 +13,15 @@ body {
 }
 
 header {
-	padding-top: 25px;
-	padding-bottom: 50px; 
+	padding-top: 15px;
+	padding-bottom: 15px; 
 	text-align: center;
 	font-size: 4em;
 }
 
 #zipForm {
-	padding-top: 50px;
-	padding-bottom: 100px; 
+	padding-top: 25px;
+	padding-bottom: 25px; 
 	text-align: center;
 }
 
@@ -30,8 +30,8 @@ header {
 		padding-top: 15px; 
 		padding-bottom: 15px; 
 	}
-		#zipForm {
-		padding-top: 0;
+	#zipForm {
+		padding-top: 15px;
 		padding-bottom: 15px;
 	}
 }
