@@ -19,6 +19,11 @@ header {
 	font-size: 4em;
 }
 
+#weatherIcon {
+	padding: 20px;
+	font-size: 10em;
+}
+
 #zipForm {
 	padding-top: 25px;
 	padding-bottom: 25px; 
@@ -34,6 +39,10 @@ header {
 		padding-top: 15px;
 		padding-bottom: 15px;
 	}
+
+	#weatherIcon {
+		font-size: 8em;
+	}	
 }
 
 @media(min-width: 768px) {
