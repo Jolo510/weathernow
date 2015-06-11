@@ -23,6 +23,8 @@ function loadData() {
 			if ($("#searchTop").hasClass("has-error") || $("#searchBottom").hasClass("has-error") ) {
 				$("#searchTop").removeClass("has-error");
 				$("#searchBottom").removeClass("has-error");
+				$("#inputErrorTop").addClass("hideError");
+				$("#inputErrorBottom").addClass("hideError"); 
 			} 
 
 			var code = weatherCode[resultObject[2].code]; 
@@ -43,6 +45,9 @@ function loadData() {
 			// Adds error class to the form when an error occurs 
 			$("#searchTop").addClass("has-error");
 			$("#searchBottom").addClass("has-error");
+			$("#inputErrorTop").removeClass("hideError");
+			$("#inputErrorBottom").removeClass("hideError"); 
+
 		}
 
 	}).error(function(e) {

@@ -41,11 +41,19 @@ header {
 	}
 }
 
+.error {
+	padding-top: 10px; 
+	padding-bottom: 10px; 
+	color: red;
+}
+
+.hideError {
+	display: none;
+}
+
 #footerSpacing{
 	padding: 50px;
 }
-
-
 
 footer {
 	text-align: center;
