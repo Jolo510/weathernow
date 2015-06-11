@@ -1,3 +1,6 @@
+// The initial image shown for the current weather icon. 
+var previousClass = "wi-alien"; 
+
 function loadData() {
 	var location = $('#location').val();
 	var locationBottom = $('#locationBottom').val();  
@@ -10,7 +13,8 @@ function loadData() {
 	$("#searchTop")[0].reset(); 
 	$("#searchBottom")[0].reset(); 
 	$.getJSON(weatherUrl, function(data) {
-		var resultObject = JSON.parse(data);	// location = {city, country, region}
+		var resultObject = JSON.parse(data);	// error
+												// location = {city, country, region}
 												// condition = {code, date, temp, text} 
 												// astronomy = {sunrise, sunset}
 												// forecast = {code, date, day, high, low, text}
@@ -21,6 +25,12 @@ function loadData() {
 				$("#searchBottom").removeClass("has-error");
 			} 
 
+			var code = weatherCode[resultObject[2].code]; 
+
+			$("#currentWeatherIcon").removeClass(previousClass).addClass(code);
+			previousClass = weatherCode[resultObject[2].code];  
+			console.log(previousClass);
+
 			$('#sunrise').text(resultObject[3].sunrise);
 			$('#place').text(resultObject[1].city + ', ' + resultObject[1].region); 
 			$('#weather').text(resultObject[2].text); 
@@ -28,6 +38,7 @@ function loadData() {
 			$('#sunset').text(resultObject[3].sunset); 
 			$('#high').text(resultObject[4].high);
 			$('#low').text(resultObject[4].low); 
+			
 		} else {
 			// Adds error class to the form when an error occurs 
 			$("#searchTop").addClass("has-error");
