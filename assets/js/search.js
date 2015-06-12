@@ -2,6 +2,7 @@
 var previousClass = "wi-alien"; 
 
 function loadData() {
+	$(".disableItem").prop("disabled", true); 
 	var location = $('#location').val();
 	var locationBottom = $('#locationBottom').val();  
 	if (location === '') {
@@ -25,6 +26,7 @@ function loadData() {
 				$("#searchBottom").removeClass("has-error");
 				$("#inputErrorTop").addClass("hideError");
 				$("#inputErrorBottom").addClass("hideError"); 
+				$(".disableItem").prop("disabled", false); 
 			} 
 
 			var code = weatherCode[resultObject[2].code]; 
@@ -40,6 +42,7 @@ function loadData() {
 			$('#sunset').text(resultObject[3].sunset); 
 			$('#high').text(resultObject[4].high);
 			$('#low').text(resultObject[4].low); 
+			$(".disableItem").prop("disabled", false); 
 			
 		} else {
 			// Adds error class to the form when an error occurs 
@@ -47,7 +50,7 @@ function loadData() {
 			$("#searchBottom").addClass("has-error");
 			$("#inputErrorTop").removeClass("hideError");
 			$("#inputErrorBottom").removeClass("hideError"); 
-
+			$(".disableItem").prop("disabled", false); 
 		}
 
 	}).error(function(e) {
