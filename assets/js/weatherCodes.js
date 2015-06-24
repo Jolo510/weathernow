@@ -28,7 +28,7 @@ var weatherCode = [
 	"wi-cloudy",
 	"wi-night-cloudy",
 	"wi-day-cloudy",
-	"night-partly-cloudy",
+	"wi-night-partly-cloudy",
 	"wi-day-cloudy",	// 30 
 	"wi-night-clear",
 	"wi-day-sunny",
